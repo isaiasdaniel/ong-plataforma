@@ -45,4 +45,4 @@ Este projeto é de uso acadêmico, criado exclusivamente para fins educacionais.
 Para visualizar o projeto localmente:
 1. Faça o download ou clone o repositório:
    ```bash
-   git clone https://github.com/SEU_USUARIO/ong-plataforma
+   git clone https://github.com/isaiasdaniel/ong-plataforma
