@@ -34,6 +34,12 @@ A plataforma oferece uma presença digital profissional, com páginas de apresen
 Todas as imagens estão localizadas na pasta `assets/images` e são otimizadas para web.
 
 ---
+## 🏁 Licença
+
+Este projeto é de uso acadêmico, criado exclusivamente para fins educacionais.
+© 2025 – Todos os direitos reservados.
+
+---
 
 ## 🚀 **Execução**
 Para visualizar o projeto localmente:
