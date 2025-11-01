@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -189,3 +190,196 @@
     <script src="assets/js/masks.js" defer></script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Cadastro de voluntários e apoiadores." />
+    <title>ONG Esperança | Cadastro</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <a class="brand" href="index.html">ONG Esperança</a>
+      <nav aria-label="Navegação principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="conteudo" class="container">
+      <h1>Cadastro</h1>
+      <p>Preencha seus dados para se voluntariar, doar ou receber novidades.</p>
+
+      <form
+        class="form"
+        action="#"
+        method="post"
+        novalidate
+        aria-describedby="ajuda"
+      >
+        <p id="ajuda">Os campos marcados com * são obrigatórios.</p>
+
+        <fieldset>
+          <legend>Dados pessoais</legend>
+
+          <div class="field">
+            <label for="nome">Nome completo *</label>
+            <input
+              id="nome"
+              name="nome"
+              type="text"
+              required
+              minlength="3"
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail *</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="field">
+            <label for="cpf">CPF *</label>
+            <!-- Validação nativa com pattern + máscara JS -->
+            <input
+              id="cpf"
+              name="cpf"
+              type="text"
+              inputmode="numeric"
+              required
+              maxlength="14"
+              placeholder="000.000.000-00"
+              pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
+              aria-describedby="cpf-help"
+            />
+            <small id="cpf-help" class="help">Formato: 000.000.000-00</small>
+          </div>
+
+          <div class="field">
+            <label for="telefone">Telefone *</label>
+            <input
+              id="telefone"
+              name="telefone"
+              type="tel"
+              inputmode="tel"
+              required
+              maxlength="15"
+              placeholder="(11) 99999-9999"
+              pattern="^\(\d{2}\)\s?\d{4,5}-\d{4}$"
+              aria-describedby="tel-help"
+            />
+            <small id="tel-help" class="help">Formato: (11) 99999-9999</small>
+          </div>
+
+          <div class="field">
+            <label for="nascimento">Data de nascimento *</label>
+            <input id="nascimento" name="nascimento" type="date" required />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Endereço</legend>
+
+          <div class="field">
+            <label for="endereco">Endereço *</label>
+            <input
+              id="endereco"
+              name="endereco"
+              type="text"
+              required
+              autocomplete="street-address"
+            />
+          </div>
+
+          <div class="field">
+            <label for="cep">CEP *</label>
+            <input
+              id="cep"
+              name="cep"
+              type="text"
+              inputmode="numeric"
+              required
+              maxlength="9"
+              placeholder="00000-000"
+              pattern="^\d{5}-\d{3}$"
+              aria-describedby="cep-help"
+            />
+            <small id="cep-help" class="help">Formato: 00000-000</small>
+          </div>
+
+          <div class="field">
+            <label for="cidade">Cidade *</label>
+            <input id="cidade" name="cidade" type="text" required />
+          </div>
+
+          <div class="field">
+            <label for="estado">Estado (UF) *</label>
+            <input
+              id="estado"
+              name="estado"
+              type="text"
+              required
+              maxlength="2"
+              pattern="^[A-Za-z]{2}$"
+              placeholder="SP"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Interesse</legend>
+          <div class="field">
+            <label for="tipo">Quero:</label>
+            <select id="tipo" name="tipo">
+              <option value="voluntariado">Ser voluntário(a)</option>
+              <option value="doacoes">Doar</option>
+              <option value="novidades">Receber novidades</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="mensagem">Mensagem (opcional)</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="4"
+              maxlength="500"
+              placeholder="Conte um pouco sobre você ou sua disponibilidade."
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button class="btn" type="submit">Enviar cadastro</button>
+          <button class="btn is-secondary" type="reset">Limpar</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="container">
+      <p>
+        &copy; <span id="ano"></span> ONG Esperança • Protegemos seus dados
+        pessoais.
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("ano").textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/masks.js" defer></script>
+  </body>
+</html>
+>>>>>>> 6d6cc88 ( Please enter the commit message for your changes. Lines starting)
