@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 (function () {
   const onlyDigits = (v) => v.replace(/\D/g, "");
 
@@ -38,7 +37,6 @@
     });
   }
 })();
-=======
 (function () {
   const onlyDigits = (v) => v.replace(/\D/g, "");
 
@@ -78,4 +76,3 @@
     });
   }
 })();
->>>>>>> 6d6cc88 ( Please enter the commit message for your changes. Lines starting)
