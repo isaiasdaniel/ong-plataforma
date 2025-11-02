@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ONG Conecta — Cadastro</title>
     <meta name="description" content="Cadastro de voluntários e apoiadores." />
-    <title>ONG Esperança | Cadastro</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header class="container">
-      <a class="brand" href="index.html">ONG Esperança</a>
-      <nav aria-label="Navegação principal">
-        <ul class="menu">
+    <!-- Header -->
+    <header class="site-header">
+      <nav class="nav container" aria-label="Principal">
+        <a class="logo" href="index.html">ONG<span>Conecta</span></a>
+
+        <button
+          class="hamburger"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          ☰
+        </button>
+
+        <ul id="menu" class="nav-links">
           <li><a href="index.html">Início</a></li>
           <li><a href="projetos.html">Projetos</a></li>
           <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
@@ -19,9 +30,13 @@
       </nav>
     </header>
 
-    <main id="conteudo" class="container">
-      <h1>Cadastro</h1>
-      <p>Preencha seus dados para se voluntariar, doar ou receber novidades.</p>
+    <main class="container main">
+      <header class="page-head">
+        <h1>Cadastro</h1>
+        <p>
+          Preencha seus dados para se voluntariar, doar ou receber novidades.
+        </p>
+      </header>
 
       <form
         class="form"
@@ -30,9 +45,12 @@
         novalidate
         aria-describedby="ajuda"
       >
-        <p id="ajuda">Os campos marcados com * são obrigatórios.</p>
+        <p id="ajuda" class="muted">
+          Os campos marcados com * são obrigatórios.
+        </p>
 
-        <fieldset>
+        <!-- Dados pessoais -->
+        <fieldset class="fieldset">
           <legend>Dados pessoais</legend>
 
           <div class="field">
@@ -60,7 +78,6 @@
 
           <div class="field">
             <label for="cpf">CPF *</label>
-            <!-- Validação nativa com pattern + máscara JS -->
             <input
               id="cpf"
               name="cpf"
@@ -97,57 +114,62 @@
           </div>
         </fieldset>
 
-        <fieldset>
+        <!-- Endereço -->
+        <fieldset class="fieldset">
           <legend>Endereço</legend>
 
-          <div class="field">
-            <label for="endereco">Endereço *</label>
-            <input
-              id="endereco"
-              name="endereco"
-              type="text"
-              required
-              autocomplete="street-address"
-            />
-          </div>
+          <div class="grid-12">
+            <div class="field col-8 col-sm-12">
+              <label for="endereco">Endereço *</label>
+              <input
+                id="endereco"
+                name="endereco"
+                type="text"
+                required
+                autocomplete="street-address"
+              />
+            </div>
 
-          <div class="field">
-            <label for="cep">CEP *</label>
-            <input
-              id="cep"
-              name="cep"
-              type="text"
-              inputmode="numeric"
-              required
-              maxlength="9"
-              placeholder="00000-000"
-              pattern="^\d{5}-\d{3}$"
-              aria-describedby="cep-help"
-            />
-            <small id="cep-help" class="help">Formato: 00000-000</small>
-          </div>
+            <div class="field col-4 col-sm-12">
+              <label for="cep">CEP *</label>
+              <input
+                id="cep"
+                name="cep"
+                type="text"
+                inputmode="numeric"
+                required
+                maxlength="9"
+                placeholder="00000-000"
+                pattern="^\d{5}-\d{3}$"
+                aria-describedby="cep-help"
+              />
+              <small id="cep-help" class="help">Formato: 00000-000</small>
+            </div>
 
-          <div class="field">
-            <label for="cidade">Cidade *</label>
-            <input id="cidade" name="cidade" type="text" required />
-          </div>
+            <div class="field col-8 col-sm-12">
+              <label for="cidade">Cidade *</label>
+              <input id="cidade" name="cidade" type="text" required />
+            </div>
 
-          <div class="field">
-            <label for="estado">Estado (UF) *</label>
-            <input
-              id="estado"
-              name="estado"
-              type="text"
-              required
-              maxlength="2"
-              pattern="^[A-Za-z]{2}$"
-              placeholder="SP"
-            />
+            <div class="field col-4 col-sm-12">
+              <label for="estado">Estado (UF) *</label>
+              <input
+                id="estado"
+                name="estado"
+                type="text"
+                required
+                maxlength="2"
+                pattern="^[A-Za-z]{2}$"
+                placeholder="SP"
+              />
+            </div>
           </div>
         </fieldset>
 
-        <fieldset>
+        <!-- Interesse -->
+        <fieldset class="fieldset">
           <legend>Interesse</legend>
+
           <div class="field">
             <label for="tipo">Quero:</label>
             <select id="tipo" name="tipo">
@@ -170,20 +192,43 @@
         </fieldset>
 
         <div class="actions">
-          <button class="btn" type="submit">Enviar cadastro</button>
-          <button class="btn is-secondary" type="reset">Limpar</button>
+          <button class="btn btn--primary" type="submit">
+            Enviar cadastro
+          </button>
+          <button class="btn btn--ghost" type="reset">Limpar</button>
         </div>
       </form>
     </main>
 
-    <footer class="container">
-      <p>
-        &copy; <span id="ano"></span> ONG Esperança • Protegemos seus dados
-        pessoais.
-      </p>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>
+          © <span id="ano"></span> ONG Conecta — Protegemos seus dados pessoais.
+        </p>
+        <nav aria-label="Rodapé">
+          <a href="index.html">Início</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="cadastro.html" aria-current="page">Cadastro</a>
+        </nav>
+      </div>
     </footer>
 
     <script>
+      // Menu mobile + header com sombra
+      const header = document.querySelector(".site-header");
+      const btn = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+      btn.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("active");
+      });
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 8);
+      });
+
+      // Ano dinâmico
       document.getElementById("ano").textContent = new Date().getFullYear();
     </script>
     <script src="assets/js/masks.js" defer></script>
