@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ONG Conecta — Projetos</title>
     <meta
       name="description"
-      content="Projetos sociais, voluntariado e como doar."
+      content="Projetos sociais, voluntariado e doações."
     />
-    <title>ONG Esperança | Projetos</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header class="container">
-      <a class="brand" href="index.html">ONG Esperança</a>
-      <nav aria-label="Navegação principal">
-        <ul class="menu">
+    <!-- Header -->
+    <header class="site-header">
+      <nav class="nav container" aria-label="Principal">
+        <a class="logo" href="index.html">ONG<span>Conecta</span></a>
+        <button
+          class="hamburger"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          ☰
+        </button>
+        <ul id="menu" class="nav-links">
           <li><a href="index.html">Início</a></li>
           <li><a href="projetos.html" aria-current="page">Projetos</a></li>
           <li><a href="cadastro.html">Cadastro</a></li>
@@ -22,8 +31,8 @@
       </nav>
     </header>
 
-    <main id="conteudo">
-      <header class="container">
+    <main class="container main">
+      <header class="page-head">
         <h1>Projetos sociais</h1>
         <p>
           Conheça iniciativas que você pode apoiar como voluntário(a) ou
@@ -31,79 +40,132 @@
         </p>
       </header>
 
-      <section class="grid container" aria-labelledby="proj-educacao">
-        <article class="card" aria-labelledby="h-educacao">
-          <figure>
+      <section class="cards">
+        <!-- Reforço Escolar -->
+        <article class="card">
+          <figure class="card__media">
             <img
               src="assets/images/projeto1.jpg"
               alt="Aula de reforço escolar para crianças"
+              loading="lazy"
             />
           </figure>
-          <div class="card-body">
-            <h2 id="h-educacao">Reforço Escolar</h2>
+          <div class="card__body">
+            <h2>Reforço Escolar</h2>
             <p>
               Aulas gratuitas de português e matemática para estudantes do
               ensino fundamental.
             </p>
-            <ul>
+            <ul class="list">
               <li><strong>Impacto:</strong> 120 crianças atendidas/mês</li>
               <li><strong>Local:</strong> Zona Leste – SP</li>
             </ul>
-            <p>
-              <a class="btn" href="cadastro.html">Quero ser voluntário(a)</a>
-            </p>
+          </div>
+          <div class="card__footer">
+            <a class="btn btn--primary" href="cadastro.html"
+              >Quero ser voluntário(a)</a
+            >
           </div>
         </article>
 
-        <article class="card" aria-labelledby="h-profissao">
-          <figure>
+        <!-- alimentacao solidaria -->
+        <article class="card">
+          <figure class="card__media">
             <img
               src="assets/images/projeto2.jpg"
               alt="Oficina de capacitação profissional"
+              loading="lazy"
             />
           </figure>
-          <div class="card-body">
-            <h2 id="h-profissao">Primeiro Emprego</h2>
+          <div class="card__body">
+            <h2>Alimentação Solidária</h2>
             <p>
-              Capacitação em tecnologia, atendimento e empreendedorismo para
-              jovens.
+              Distribuição de cestas básicas e refeições para famílias em
+              situação de vulnerabilidade.
             </p>
-            <ul>
+            <ul class="list">
               <li><strong>Impacto:</strong> 60 jovens por ciclo</li>
               <li>
                 <strong>Parcerias:</strong> Instituições de ensino e empresas
               </li>
             </ul>
-            <p><a class="btn" href="cadastro.html">Quero me inscrever</a></p>
+          </div>
+          <div class="card__footer">
+            <a class="btn btn--primary" href="cadastro.html"
+              >Quero me inscrever</a
+            >
+          </div>
+        </article>
+
+        <!-- Laços de Pata -->
+        <article class="card">
+          <figure class="card__media">
+            <img
+              src="assets/images/projeto-3.jpg"
+              alt="Cuidado e adoção responsável de animais"
+              loading="lazy"
+            />
+          </figure>
+          <div class="card__body">
+            <h2>Laços de Pata</h2>
+            <p>
+              Resgate, castração e adoção responsável de animais em situação de
+              rua.
+            </p>
+            <ul class="list">
+              <li><strong>Apoio:</strong> Clínicas parceiras</li>
+              <li>
+                <strong>Necessidades:</strong> Ração, remédios, lares
+                temporários
+              </li>
+            </ul>
+          </div>
+          <div class="card__footer">
+            <a class="btn btn--secondary" href="cadastro.html">Apoiar agora</a>
           </div>
         </article>
       </section>
 
-      <section class="container" aria-labelledby="doacoes">
-        <h2 id="doacoes">Como doar</h2>
+      <!-- Como doar -->
+      <section class="doacoes">
+        <h2>Como doar</h2>
         <p>
           Suas doações mantêm nossos projetos vivos. Aceitamos PIX, cartão e
           boleto via parceiros de pagamento.
         </p>
         <details>
           <summary><strong>Dados para PIX</strong></summary>
-          <p>Chave (e-mail): doacoes@ongesperanca.org</p>
+          <p>Chave (e-mail): doacoes@ongconecta.org</p>
         </details>
-        <p>
-          <a class="btn is-secondary" href="cadastro.html"
-            >Quero receber recibo e relatórios</a
-          >
-        </p>
       </section>
     </main>
 
-    <footer class="container">
-      <p>
-        &copy; <span id="ano"></span> ONG Esperança • Transparência e impacto
-        social
-      </p>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>
+          © <span id="ano"></span> ONG Conecta — Transparência e impacto social.
+        </p>
+        <nav aria-label="Rodapé">
+          <a href="index.html">Início</a>
+          <a href="projetos.html" aria-current="page">Projetos</a>
+          <a href="cadastro.html">Cadastro</a>
+        </nav>
+      </div>
     </footer>
+
     <script>
+      const header = document.querySelector(".site-header");
+      const btn = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+      btn.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("active");
+      });
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 8);
+      });
       document.getElementById("ano").textContent = new Date().getFullYear();
     </script>
   </body>
