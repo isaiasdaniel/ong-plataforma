@@ -127,27 +127,39 @@
 </html>
 =======
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ONG Conecta — Transformando vidas</title>
     <meta
       name="description"
-      content="ONG Esperança – Projetos sociais, voluntariado e transparência."
+      content="Plataforma para ONGs: projetos, voluntariado e doações com transparência."
     />
-    <title>ONG Esperança | Início</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header class="container">
-      <a
-        class="brand"
-        href="index.html"
-        aria-label="Página inicial da ONG Esperança"
-        >ONG Esperança</a
-      >
-      <nav aria-label="Navegação principal">
-        <ul class="menu">
+    <!-- Header / Nav -->
+    <header class="site-header">
+      <nav class="nav container" aria-label="Principal">
+        <a class="logo" href="index.html">ONG<span>Conecta</span></a>
+
+        <button
+          class="hamburger"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          ☰
+        </button>
+
+        <ul id="menu" class="nav-links">
           <li><a href="index.html" aria-current="page">Início</a></li>
           <li><a href="projetos.html">Projetos</a></li>
           <li><a href="cadastro.html">Cadastro</a></li>
@@ -155,97 +167,189 @@
       </nav>
     </header>
 
-    <main id="conteudo">
-      <section class="hero container" aria-labelledby="titulo-hero">
-        <div>
-          <h1 id="titulo-hero">
-            Transformando realidades com educação e solidariedade
-          </h1>
-          <p>
-            Atuamos em comunidades vulneráveis conectando
-            <strong>voluntários</strong>, <strong>doadores</strong> e
-            <strong>projetos</strong> que geram impacto real.
-          </p>
-          <p><a class="btn" href="projetos.html">Conheça os projetos</a></p>
-        </div>
-        <figure class="hero-media">
-          <img
-            src="assets/images/hero.jpg"
-            alt="Voluntários em ação em um projeto comunitário"
-          />
-          <figcaption>Juntos fazemos a diferença.</figcaption>
-        </figure>
-      </section>
-
-      <section class="container" aria-labelledby="sobre">
-        <h2 id="sobre">Quem somos</h2>
+    <!-- Hero -->
+    <section class="hero">
+      <div
+        class="hero__bg"
+        role="img"
+        aria-label="Voluntários em ação pela comunidade"
+      ></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content container">
+        <h1>Conectamos pessoas, <br class="br-md" />recursos e propósitos</h1>
         <p>
-          Somos uma organização sem fins lucrativos que promove inclusão social
-          por meio de educação básica, reforço escolar e capacitação
-          profissional.
+          Transparência, impacto real e oportunidades de voluntariado em um só
+          lugar.
         </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="projetos.html">Conhecer projetos</a>
+          <a class="btn btn--ghost" href="cadastro.html"
+            >Quero ser voluntário</a
+          >
+        </div>
+        <ul class="stats">
+          <li><strong>120+</strong><span>Voluntários ativos</span></li>
+          <li><strong>35</strong><span>Projetos em andamento</span></li>
+          <li><strong>R$ 280k</strong><span>Doações auditadas</span></li>
+        </ul>
+      </div>
+    </section>
 
-        <article aria-labelledby="missao">
-          <h3 id="missao">Missão</h3>
+    <!-- Sobre -->
+    <main class="container main">
+      <section class="sobre grid-12">
+        <div class="sobre__texto col-7 col-md-12">
+          <h2>Quem somos</h2>
           <p>
-            Fortalecer pessoas e comunidades por meio de oportunidades
-            educacionais e culturais.
+            Somos uma plataforma que ajuda ONGs a gerenciar atividades, captar
+            recursos e engajar voluntários com eficiência e transparência.
+            Construímos pontes entre quem quer ajudar e quem precisa de ajuda.
           </p>
-        </article>
-
-        <article aria-labelledby="visao">
-          <h3 id="visao">Visão</h3>
-          <p>
-            Ser referência em impacto socioeducacional no Brasil, com
-            transparência e eficiência.
-          </p>
-        </article>
-
-        <article aria-labelledby="valores">
-          <h3 id="valores">Valores</h3>
-          <ul>
-            <li>Transparência</li>
-            <li>Colaboração</li>
-            <li>Equidade</li>
-            <li>Responsabilidade</li>
+          <ul class="badges">
+            <li class="badge">Transparência</li>
+            <li class="badge">Impacto Social</li>
+            <li class="badge">Acessibilidade</li>
+            <li class="badge">Sustentabilidade</li>
           </ul>
-        </article>
-
-        <figure class="media-inline">
-          <img src="assets/images/equipe.jpg" alt="Equipe da ONG reunida" />
-          <figcaption>Nossa equipe multidisciplinar.</figcaption>
+        </div>
+        <figure class="sobre__imagem col-5 col-md-12">
+          <img
+            src="assets/images/sobre.jpg"
+            alt="Equipe de voluntários sorrindo"
+            loading="lazy"
+          />
         </figure>
       </section>
 
-      <section class="container" aria-labelledby="contato">
-        <h2 id="contato">Contato</h2>
-        <address>
-          <p>
-            <strong>E-mail:</strong>
-            <a href="mailto:contato@ongesperanca.org"
-              >contato@ongesperanca.org</a
-            >
-          </p>
-          <p>
-            <strong>Telefone:</strong>
-            <a href="tel:+5562991845624">(62) 99184-5624</a>
-          </p>
-          <p>
-            <strong>Endereço:</strong> Rua da Solidariedade, 100 – Goiania/GO
-          </p>
-        </address>
+      <!-- Projetos em destaque -->
+      <section class="projetos">
+        <div class="section-head">
+          <h2>Projetos em destaque</h2>
+          <a class="link" href="projetos.html">Ver todos os projetos →</a>
+        </div>
+
+        <div class="cards">
+          <!-- Card 1 -->
+          <article class="card">
+            <figure class="card__media">
+              <img
+                src="assets/images/projeto-1.jpg"
+                alt="Mutirão de alimentação solidária"
+                loading="lazy"
+              />
+            </figure>
+            <div class="card__body">
+              <h3>Alimentação Solidária</h3>
+              <p>
+                Distribuição de cestas básicas e refeições para famílias em
+                situação de vulnerabilidade.
+              </p>
+              <div class="tags">
+                <span class="tag">Segurança alimentar</span>
+                <span class="tag">Urgente</span>
+              </div>
+            </div>
+            <div class="card__footer">
+              <a class="btn btn--secondary" href="projetos.html"
+                >Apoiar projeto</a
+              >
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <figure class="card__media">
+              <img
+                src="assets/images/projeto-2.jpg"
+                alt="Aulas de reforço escolar"
+                loading="lazy"
+              />
+            </figure>
+            <div class="card__body">
+              <h3>Educa +</h3>
+              <p>
+                Refôrço escolar e inclusão digital para crianças e adolescentes
+                da rede pública.
+              </p>
+              <div class="tags">
+                <span class="tag">Educação</span>
+                <span class="tag">Voluntários</span>
+              </div>
+            </div>
+            <div class="card__footer">
+              <a class="btn btn--secondary" href="projetos.html"
+                >Apoiar projeto</a
+              >
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <figure class="card__media">
+              <img
+                src="assets/images/projeto-3.jpg"
+                alt="Cuidados com animais resgatados"
+                loading="lazy"
+              />
+            </figure>
+            <div class="card__body">
+              <h3>Laços de Pata</h3>
+              <p>
+                Resgate, castração e adoção responsável de animais em situação
+                de rua.
+              </p>
+              <div class="tags">
+                <span class="tag">Causa animal</span>
+                <span class="tag">Doações</span>
+              </div>
+            </div>
+            <div class="card__footer">
+              <a class="btn btn--secondary" href="projetos.html"
+                >Apoiar projeto</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta">
+        <h2>Pronto para fazer parte?</h2>
+        <p>
+          Cadastre-se como voluntário e receba oportunidades alinhadas ao seu
+          perfil.
+        </p>
+        <a class="btn btn--primary" href="cadastro.html">Quero me cadastrar</a>
       </section>
     </main>
 
-    <footer class="container">
-      <p>
-        &copy; <span id="ano"></span> ONG Esperança • Transparência e impacto
-        social
-      </p>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© 2025 ONG Conecta — Transparência e impacto social.</p>
+        <nav aria-label="Rodapé">
+          <a href="index.html">Início</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="cadastro.html">Cadastro</a>
+        </nav>
+      </div>
     </footer>
 
     <script>
-      document.getElementById("ano").textContent = new Date().getFullYear();
+      const header = document.querySelector(".site-header");
+      const btn = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+
+      btn.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("active");
+      });
+
+      // Sombreamento no scroll
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 8);
+      });
     </script>
   </body>
 </html>
