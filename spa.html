@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ONG Conecta — SPA</title>
+    <meta
+      name="description"
+      content="SPA da ONG Conecta: projetos, voluntariado e cadastro."
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Header / Nav (o mesmo visual da home) -->
+    <header class="site-header">
+      <nav class="nav container" aria-label="Principal">
+        <a class="logo" href="#/">ONG<span>Conecta</span></a>
+        <button
+          class="hamburger"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          ☰
+        </button>
+        <ul id="menu" class="nav-links">
+          <li><a href="#/" data-link>Início</a></li>
+          <li><a href="#/projetos" data-link>Projetos</a></li>
+          <li><a href="#/cadastro" data-link>Cadastro</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Área que o router vai preencher -->
+    <main class="container main" id="app" aria-live="polite"></main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>
+          © <span id="ano"></span> ONG Conecta — Transparência e impacto social.
+        </p>
+        <nav aria-label="Rodapé">
+          <a href="#/">Início</a>
+          <a href="#/projetos">Projetos</a>
+          <a href="#/cadastro">Cadastro</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- JS (módulos) -->
+    <script type="module" src="assets/js/app/main.js"></script>
+  </body>
+</html>
