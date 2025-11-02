@@ -1,48 +1,94 @@
-# 🌍 Plataforma Web para ONGs – ONG Esperança
+# 🌍 ONG Conecta — Plataforma Social Interativa
 
-Este projeto foi desenvolvido como parte da atividade prática da disciplina de **Desenvolvimento Front-End**, com o objetivo de criar uma **plataforma web completa e semântica em HTML5** para Organizações Não Governamentais (ONGs).  
-
-A plataforma oferece uma presença digital profissional, com páginas de apresentação institucional, projetos sociais e um formulário de cadastro de voluntários e doadores.
-
----
-
-## 📑 **Páginas do Projeto**
-- **index.html** – Página inicial da organização, com missão, visão, valores e informações de contato.  
-- **projetos.html** – Apresenta os projetos sociais, oportunidades de voluntariado e opções de doação.  
-- **cadastro.html** – Formulário completo para cadastro de voluntários, doadores e interessados.
+**Desenvolvido por:** Isaías Daniel Barros García  
+**Curso:** Análise e Desenvolvimento de Sistemas — Cruzeiro do Sul  
+**Disciplina:** Experiência Prática IV — Desenvolvimento Front-End  
+**Versão:** 1.0.0
 
 ---
 
-## ⚙️ **Recursos e Tecnologias**
-- HTML5 semântico (estrutura acessível e organizada)  
-- CSS3 responsivo (design mobile-first)  
-- JavaScript (máscaras de CPF, telefone e CEP)  
-- Validação nativa com atributos HTML5  
-- Estrutura organizada com pastas (`assets/css`, `assets/js`, `assets/images`)
+## 🎯 Objetivo do Projeto
+
+A **ONG Conecta** é uma plataforma digital criada para apoiar organizações sociais, voluntários e doadores, conectando pessoas, causas e oportunidades.  
+O objetivo é oferecer um ambiente moderno, acessível e interativo para gerenciamento de projetos sociais e engajamento comunitário.
 
 ---
 
-## 🧩 **Validação e Acessibilidade**
-- Páginas validadas no **W3C HTML Validator**  
-- Layout acessível (uso de `aria-labels`, `legend`, `alt`, `address`)  
-- Contraste e responsividade adequados  
-- Navegação semântica por teclado
+## 🧩 Tecnologias Utilizadas
+
+- **HTML5** — Estrutura semântica e acessível
+- **CSS3 (Grid & Flexbox)** — Layout responsivo e mobile-first
+- **JavaScript ES6 Modular** — SPA, validação e interação dinâmica
+- **Git / GitHub Flow** — Controle de versão profissional
+- **GitHub Pages** — Deploy em ambiente de produção
+- **WCAG 2.1 AA** — Acessibilidade completa
+- **LocalStorage** — Armazenamento local de dados
 
 ---
 
-## 📸 **Imagens Utilizadas**
-Todas as imagens estão localizadas na pasta `assets/images` e são otimizadas para web.
+## ⚙️ Funcionalidades Principais
+
+- SPA (Single Page Application) com **router baseado em hash**
+- **Formulário validado** com mensagens de erro e máscaras dinâmicas
+- **Autosave localStorage** para evitar perda de dados
+- **Modo escuro automático** conforme preferências do sistema
+- **Versão de alto contraste acessível**
+- **Código minificado (CSS, JS, HTML)** para melhor desempenho
+- **Imagens otimizadas** para web
 
 ---
-## 🏁 Licença
 
-Este projeto é de uso acadêmico, criado exclusivamente para fins educacionais.
-© 2025 – Todos os direitos reservados.
+## 📁 Estrutura de Pastas
+
+ong-plataforma/
+│
+├── assets/
+│ ├── css/
+│ │ ├── style.css
+│ │ └── style.min.css
+│ ├── js/
+│ │ └── app/
+│ │ ├── main.js
+│ │ ├── router.js
+│ │ ├── templates.js
+│ │ ├── form.js
+│ │ └── main.min.js
+│ └── images/
+│
+├── index.html
+├── projetos.html
+├── cadastro.html
+├── spa.html
+└── README.md
 
 ---
 
-## 🚀 **Execução**
-Para visualizar o projeto localmente:
-1. Faça o download ou clone o repositório:
-   ```bash
-   git clone https://github.com/isaiasdaniel/ong-plataforma
+## 🚀 Deploy
+
+🔗 **Visualizar site publicado:**  
+[https://isaiasdaniel.github.io/ong-plataforma/spa.html](https://isaiasdaniel.github.io/ong-plataforma/spa.html)
+
+🔗 **Repositório público no GitHub:**  
+[https://github.com/isaiasdaniel/ong-plataforma](https://github.com/isaiasdaniel/ong-plataforma)
+
+---
+
+## ♿ Acessibilidade (WCAG 2.1 AA)
+
+- Navegação total via teclado
+- Leitura de conteúdo por leitores de tela (atributos `aria`)
+- Contraste mínimo de 4.5:1 para textos e botões
+- Estrutura semântica (`header`, `main`, `nav`, `footer`, `section`, `article`)
+- Modo escuro e versão de alto contraste configurados
+
+---
+
+## 🧠 Autor
+
+**Isaías Daniel Barros García**  
+📧 contato@drpublicidadmarketing.com  
+🌎 [LinkedIn](https://es.linkedin.com/in/isaias-daniel-05b68a78)
+
+---
+
+> _"A tecnologia é uma ponte para transformar vidas. A cada linha de código, uma nova oportunidade de esperança."_ 💚

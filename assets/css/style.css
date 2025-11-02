@@ -447,3 +447,83 @@ body {
     gap: var(--sp-2);
   }
 }
+/* ===========================
+   🌗 MODO ESCURO AUTOMÁTICO
+=========================== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #f2f2f2;
+  }
+
+  header,
+  footer,
+  .card,
+  .nav,
+  .btn {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+
+  .btn,
+  .btn--primary {
+    background-color: #008c7a;
+    color: #ffffff;
+  }
+
+  .btn--ghost {
+    border: 2px solid #00b894;
+    color: #00b894;
+  }
+
+  a {
+    color: #80dfff;
+  }
+
+  .card__body {
+    background-color: #1c1c1c;
+    border-color: #333;
+  }
+
+  .nav-links a:hover,
+  .btn:hover {
+    background-color: #00a896;
+    color: #fff;
+  }
+}
+
+/* ===========================
+   ⚫ MODO DE ALTO CONTRASTE
+=========================== */
+body.high-contrast {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.high-contrast a,
+body.high-contrast .btn {
+  color: #ff0 !important;
+  background-color: #000 !important;
+  border: 2px solid #ff0 !important;
+}
+
+body.high-contrast header,
+body.high-contrast footer {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-bottom: 2px solid #ff0;
+}
+
+/* Botão para ativar/desativar alto contraste */
+.contrast-toggle {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  background: #000;
+  color: #ff0;
+  border: 2px solid #ff0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 999;
+}
